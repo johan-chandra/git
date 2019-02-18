@@ -7,6 +7,14 @@ def pwhash(password):
         hashedpw += ord(char)
     return hashedpw
 
+def get_salt(hashedpw):
+    
+    for char2 in 0:3:
+        saltedun += ord(char2)
+
+    shpw = hashedpw + saltedun
+    return shpw
+
 def get_credentials():
     username = input("Enter username:")
     password = pwhash(getpass.getpass("Enter password:"))
